@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bếp Nhà Việt — Tìm món từ nguyên liệu</title>
+<meta name="description" content="Bếp Nhà Việt - tìm món ăn Việt từ nguyên liệu có sẵn.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top"><div class="wrap nav"><div class="brand"><span>🍲</span><div><b>Bếp Nhà Việt</b><small>Tìm món từ nguyên liệu có sẵn</small></div></div><button id="favBtn" class="ghost">♥ Yêu thích <span id="favCount">0</span></button></div></header>
+<main class="wrap">
+<section class="hero"><div><h1>Hôm nay ăn gì?</h1><p>Chọn nguyên liệu bạn đang có để khám phá những món ăn phù hợp.</p></div><button id="qrBtn" class="primary">▣ QR / Chia sẻ</button></section>
+<section class="panel controls">
+<div class="search"><span>⌕</span><input id="search" placeholder="Tìm nguyên liệu: bò, nấm, trứng..." autocomplete="off"></div>
+<div id="cats" class="chips"></div>
+<div class="row"><div><b>Đã chọn:</b> <span id="selectedCount">0</span> nguyên liệu</div><button id="clear" class="textbtn">Xóa tất cả</button></div>
+<div id="ingredients" class="ingredient-grid"></div>
+</section>
+<section class="toolbar"><div><b id="resultTitle">Gợi ý món ăn</b><span id="resultMeta"></span></div><div class="tools"><select id="diet"><option value="all">Tất cả chế độ</option><option value="vegetarian">Chay</option><option value="low-oil">Ít dầu</option><option value="low-sugar">Ít đường</option><option value="no-seafood">Không hải sản</option><option value="no-spicy">Không cay</option></select><select id="sort"><option value="relevance">Liên quan nhất</option><option value="time">Nhanh nhất</option><option value="calories">Kcal thấp → cao</option><option value="name">Tên A–Z</option></select></div></section>
+<section id="notice"></section><section id="recipes" class="recipe-grid"></section>
+</main>
+<div id="modal" class="modal hidden"><div class="backdrop"></div><article class="dialog"><button id="close" class="close">×</button><img id="mImg" class="mimg"><div class="dialogbody"><div class="mhead"><div><span id="mCat" class="pill"></span><h2 id="mName"></h2></div><button id="mFav" class="heart">♡</button></div><div id="mStats" class="stats"></div><div class="cols"><div><h3>Nguyên liệu</h3><ul id="mIng"></ul><h3>Gia vị</h3><ul id="mSeason"></ul></div><div><h3>Cách làm</h3><ol id="mSteps"></ol></div></div><p class="source" id="mSource"></p></div></article></div>
+<div id="qrModal" class="modal hidden"><div class="backdrop"></div><article class="qrbox"><button id="qrClose" class="close">×</button><h2>Chia sẻ Bếp Nhà Việt</h2><p>Quét mã này sau khi website đã có đường link GitHub Pages.</p><div id="qrcode"></div><input id="shareUrl" readonly><button id="copyUrl" class="primary">Sao chép link</button></article></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="./script.js"></script>
+</body></html>
